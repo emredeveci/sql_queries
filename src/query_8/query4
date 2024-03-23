@@ -1,0 +1,27 @@
+DELETE FROM employee
+WHERE name LIKE 'wo_'
+RETURNING *;
+
+=====================
+
+DELETE FROM employee
+WHERE id > 30 AND name = 'Robot'
+RETURNING *;
+
+=====================
+
+DELETE FROM employee
+WHERE birthday::text LIKE '20%'
+RETURNING *;
+
+====================
+
+DELETE FROM employee
+WHERE email LIKE 'c%'
+RETURNING *;
+
+===================
+
+DELETE FROM employee
+WHERE id > 2
+RETURNING *;

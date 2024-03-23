@@ -1,0 +1,37 @@
+
+//change an employee's name using ID
+UPDATE employee
+SET name = 'Taylor'
+WHERE id = 1
+RETURNING *;
+
+=====================
+
+//change employee emails that start with the letter 'a'
+UPDATE employee
+SET email = 'aliens@takingover.com'
+WHERE email LIKE 'a%'
+RETURNING *;
+
+=====================
+
+//change employee names whose second letter is 's' to 'Robot'
+UPDATE employee
+SET name = 'Robot'
+WHERE name LIKE '_r%'
+RETURNING *;
+
+=====================
+
+//change employee birthdays that start with 1980 to another
+UPDATE employee
+SET birthday = '2000-10-10'::date
+WHERE birthday::text LIKE '1980%'
+RETURNING *;
+
+======================
+//change employee names within a certain ID range
+UPDATE employee
+SET name = 'wow'
+WHERE id > 10 and id < 20
+RETURNING *;
