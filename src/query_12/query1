@@ -1,0 +1,7 @@
+SELECT title, length
+FROM film
+WHERE length >
+(
+SELECT AVG(length)
+from film
+)
